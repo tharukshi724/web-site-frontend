@@ -1,0 +1,89 @@
+.container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+  }
+  
+  .header p {
+    color: #6c6c6c;
+    margin: 20px 0;
+  }
+  
+  .become-partner {
+    background-color: #fa8128;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .partner-directory {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .filters select,
+  .filters input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .partners {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .partner-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .partner-card h3 {
+    margin-top: 0;
+  }
+  
+  .partner-card p {
+    color: #6c6c6c;
+  }
+  
+  .get-matched {
+    background-color: #fa8128;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin-top: 20px;
+  }
+  
+  .rating {
+    display: block;
+    margin-top: 10px;
+    color: #ffb400;
+  }
+  

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Layout, Menu, Input, Row, Col, Drawer, Button, Carousel,Typography, Card,List,Switch } from 'antd';
+import { Link } from 'react-router-dom';
 import { MenuOutlined } from '@ant-design/icons';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { CheckOutlined } from '@ant-design/icons';
@@ -70,12 +71,12 @@ const Home = () => {
             onClick={handleMenuClick}
             className='menu'
           >
-            <Menu.Item key="1"><a href="#about-us">About Us</a></Menu.Item>
-            <Menu.Item key="2"><a href="#resources">Resources</a></Menu.Item>
-            <Menu.Item key="3"><a href="#news">News</a></Menu.Item>
-            <Menu.Item key="4"><a href="#how-it-works">How It Works</a></Menu.Item>
-            <Menu.Item key="5" className="right-menu" style={{marginLeft:'auto'}}><a href="#login">Log In</a></Menu.Item>
-            <Menu.Item key="6"><a href="#sign-up">Sign Up</a></Menu.Item>
+            <Menu.Item key="1"><Link to="#about-us">About Us</Link></Menu.Item>
+            <Menu.Item key="2"><Link to="#resources">Resources</Link></Menu.Item>
+            <Menu.Item key="3"><Link to="#news">News</Link></Menu.Item>
+            <Menu.Item key="4"><Link to="#how-it-works">How It Works</Link></Menu.Item>
+            <Menu.Item key="5" className="right-menu" style={{marginLeft:'auto'}}><Link to="/Login">Log In</Link></Menu.Item>
+            <Menu.Item key="6"><Link to="/Signup">Sign Up</Link></Menu.Item>
           </Menu>
         </div>
         <div className="mobile-menu">

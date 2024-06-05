@@ -1,5 +1,6 @@
 import React from 'react';
-import './styles/contact.css';
+import '../Css/contact.css';
+import Footer from './Footer';
 
 const ContactForm = () => {
   return (
@@ -18,6 +19,7 @@ const ContactForm = () => {
         <textarea placeholder="Message*" required></textarea>
         <button type="submit">Send</button>
       </form>
+      
     </div>
   );
 };
