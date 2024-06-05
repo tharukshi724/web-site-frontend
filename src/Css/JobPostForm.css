@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  
+  .jobPostMain {
+    position: relative;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+  }
+  
+  .job-post-container {
+    width: 100%; /* Adjusted width for better responsiveness */
+    max-width: 800px;
+    padding: 20px;
+    position: absolute;
+    top: 70%;
+    /* transform: translateY(-60%); */
+    
+  }
+  
+  .bannerNew {
+    background: linear-gradient(90deg, #ebbaeb, #bf7de9);
+
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .bannerNew h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #0c0909;
+    font-weight: 700;
+  }
+  
+  .bannerNew p {
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .job-post-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    margin-top: -60px;
+  }
+  
+  .job-post-card h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .job-post-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  label input,
+  label textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  label textarea {
+    height: 100px;
+  }
+  
+  .company-logo-preview {
+    margin-top: 10px;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin-right: 10px;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+  }
+  
+  .cancel-button {
+    background: #ccc;
+    color: white;
+  }
+  
+  .continue-button {
+    background: #007bff;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .job-post-container {
+      width: 90%; /* Adjusted width for better responsiveness */
+      max-width: 100%; /* Make container full width */
+      padding: 10px;
+      top: 80%;
+      transform: none;
+    }
+  }
+  

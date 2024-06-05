@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .job-posting-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-posting-content {
+    flex: 3;
+    padding-right: 20px;
+  }
+  
+  .job-summary-card {
+    flex: 1;
+    padding-left: 20px;
+    border-left: 1px solid #e0e0e0;
+  }
+  
+  .card-content {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .card-content img.company-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+  
+  .card-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .share-buttons {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .share-buttons button {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    padding: 5px 15px;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .share-buttons button svg {
+    margin-right: 5px;
+  }
+  
+  .share-buttons button:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .apply-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .apply-button:hover {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  section {
+    margin-top: 20px;
+  }
+  
+  section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  section p,
+  section ul {
+    margin: 10px 0;
+  }
+  
+  section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .job-posting-container {
+      flex-direction: column;
+    }
+  
+    .job-posting-content {
+      padding-right: 0;
+    }
+  
+    .job-summary-card {
+      padding-left: 0;
+      border-left: none;
+      margin-top: 20px;
+    }
+  
+    .card-content {
+      padding: 10px;
+    }
+  
+    .share-buttons {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .share-buttons button {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  
+    .share-buttons button:last-child {
+      margin-right: 0;
+    }
+  }
+  

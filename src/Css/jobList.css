@@ -1,0 +1,121 @@
+/* PartnershipOpportunities.css */
+
+.partnership-opportunities {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .jobIcon{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+  }
+  
+  .search-bar button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  .opportunity-list {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .opportunity-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: flex-start;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .pagination li {
+    margin: 0 5px;
+  }
+  
+  .pagination button {
+    padding: 8px 16px;
+    border: 1px solid #007bff;
+    background-color: #fff;
+    color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination button:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  .pagintionContent{
+    margin-top: 20px;
+  }
+  .jobName{
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 0;
+  }
+
+    .roundBtn{
+        border: 1px solid gray; /* Adding 'solid' style */
+        border-radius: 40px;
+        height: 30px;
+        min-width: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:center;
+        margin-right: 10px;
+        padding: 0px 10px;
+        
+    }
+    
+  
+  .btnConatiner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  
