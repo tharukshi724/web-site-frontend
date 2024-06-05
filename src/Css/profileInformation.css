@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppings' , sans-serif;
+    box-sizing:border-box;
+}
+
+
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1400px; /* Increased max-width for wider screens */
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-columns {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.left-column {
+    width: 25%; /* Adjusted width for the left column */
+}
+
+.profile-pic-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-pic {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.profile-pic input[type="file"] {
+    display: none;
+}
+
+.profile-pic .upload-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    border: 2px dashed #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+}
+
+.profile-pic .upload-button:hover {
+    background-color: #e0e0e0;
+}
+
+.profile-pic-label {
+    text-align: center;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.form-section {
+    width: 35%; /* Adjusted width for the form sections */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #555;
+    text-align: left; /* Ensure labels are aligned to the left */
+    font-family: Arial, sans-serif; /* Ensure consistent font */
+}
+
+input, select, textarea, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: Arial, sans-serif; /* Ensure consistent font */
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 20px;
+    width: 100%;
+    font-family: Arial, sans-serif; /* Ensure consistent font */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .form-columns {
+        flex-direction: column;
+    }
+
+    .left-column, .form-section {
+        width: 100%;
+    }
+}
