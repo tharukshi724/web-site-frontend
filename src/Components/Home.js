@@ -162,7 +162,7 @@ const Home = () => {
         <div className="card-container">
       <div className="card">
       <div className="cardImg" />
-        <div className="card-content">
+        <div className="card-content-Home">
           <p className='cardTitle'>Text Content Here</p>
         <p className='cardContentText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod .</p>
         </div>
@@ -383,7 +383,7 @@ const Home = () => {
         <div>
           <Row gutter={20} className="siteBanner siteBannerSecond" >
             <Col  xs={24} sm={24} md={12} lg={12} xl={12} className='leftContent leftFour'>
-              <h6 className='mainheadSecond'>Website Monetization for Publishers </h6>
+              <h6 className='mainheadSecondSixth'>Website Monetization for Publishers </h6>
               <Button type="primary" className='btnLearn'>Sign Up for Free</Button>
               <div className='serchContent'>
            

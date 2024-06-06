@@ -272,7 +272,7 @@ body {
   position: relative;
 }
 
-.card-content {
+.card-content-Home {
   text-align: center;
   position: relative;
   padding: 20px;
@@ -281,8 +281,13 @@ body {
   color: #060607;
   font-size: 40px;
   font-weight: 600;
+  margin-bottom: 0;
 
-
+}
+.mainheadSecondSixth{
+  color: #060607;
+  font-size: 40px;
+  font-weight: 600;
 }
 .subMidTitleSecond{
   font-size: 40px;
@@ -293,6 +298,7 @@ body {
 }
 .btnLearn{
   background-color: #060607;
+  width: 150px;
 }
 
 .cardTitle{
