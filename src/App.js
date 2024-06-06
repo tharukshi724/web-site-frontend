@@ -11,6 +11,8 @@ import JobPostForm from './Components/JobPostForm';
 import Blog from './Components/Blogs';
 import Home from './Components/Home';
 import Footer from './Components/Footer';
+import JoinTheClub from './Components/WhyJoin';
+import AboutUs from './Components/AboutUs';
 // import Login from './Components/Login';
 // import Signup from './Components/SignUp';
 
@@ -34,7 +36,9 @@ function App() {
     <Route path="/Signup" element={<Signup/>} /> */}
 
     </Routes>
-        <Footer />
+        {/* <Footer /> */}
+        {/* <JoinTheClub/> */}
+        <AboutUs/>
        
     </Router>
     </div>

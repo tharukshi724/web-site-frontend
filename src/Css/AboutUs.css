@@ -1,0 +1,225 @@
+.about-us-container {
+    background-color: #ffffff;
+    padding: 0px 0px 0px 0px;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+  
+  .bannerNewAbout {
+    background-color: #E5FCFA;
+    padding: 50px;
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 40px; */
+  }
+  
+  .bannerNewAbout h2 {
+    color: #333;
+    font-weight: 700;
+    font-size: 50px;
+  }
+  
+  .about-us-content {
+    width: 100%;
+    text-align: left;
+  }
+  .about-us-content-top{
+    width: 100%;
+    text-align: left;
+    padding: 50px;
+  }
+  
+  .about-us-content-top h3 {
+    font-size: 32px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-content-top p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .about-us-container {
+      padding: 20px;
+    }
+  
+    .banner {
+      padding: 30px;
+    }
+  
+    .banner h2 {
+      font-size: 24px;
+    }
+  
+    .about-us-content h3 {
+      font-size: 28px;
+    }
+  
+    .about-us-content p {
+      font-size: 16px;
+    }
+  }
+  .swiper-section {
+    padding: 20px 50px;
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  .carousel {
+    padding: 0px;
+  }
+  
+  .carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .carousel-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+  
+  .card {
+    width: 230px;
+    height: 250px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .card-content-About {
+    text-align: center;
+    position: relative;
+    padding: 20px;
+  }
+  .mainheadSecond{
+    color: #060607;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .siteBannerAbout{
+    background-color: #D1E6FB;
+    padding: 0px 100px ;
+    text-align: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    flex-direction:row;
+    justify-content: space-between;
+    
+  }
+  .leftContentAbout{
+    align-items: flex-end;
+    text-align: left;
+  }
+  .leftContentAboutSecond{
+    width: 50%;
+    text-align: left;
+  }
+  .leftContentAboutAfter{
+    align-items: flex-start;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .mainheadSecondAbout{
+    color: #060607;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 0;
+   
+  
+  }
+  .btnLearnAbout{
+    background-color: #060607;
+    width: 150px;
+    padding: 20px;
+  }
+  .aboutFirstBanner{
+    background-image: url('../images/before.png');
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    height: 600px; /* Adjust the height as needed */
+    width: 100%;
+  }
+  .siteBannerAboutSecond{
+    background-color: white;
+    padding: 0px 100px ;
+    text-align: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    flex-direction:row;
+    width: 100%;
+    justify-content: space-around;
+
+  }
+  .aboutbefore{
+    width:80%;
+    text-align: left;
+  }
+  .aboutafter{
+    width:60%;
+    text-align: left;
+  }
+  .aboutSecondBanner{
+    background-image: url('../images/after.png');
+    background-size: cover; /* Ensures the image covers the entire area */
+
+    height: 600px; /* Adjust the height as needed */
+    width: 100%;
+    align-self: flex-end;
+    align-content: flex-start;
+  }
+  .joinSection{
+    background-color: #3863FA;
+    height:50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  
+  }
+  .joinText{
+    font-size: 20px;
+    width:800px;
+    color: white;
+
+
+  }
+  .joinSection h1{
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+  }
