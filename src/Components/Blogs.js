@@ -7,6 +7,8 @@ import Footer from './Footer';
 import '../Css/Blogs.css';
 
 const Blogs = () => {
+
+    
     return (
         <section id="blog">
             <div className="blog-heading">
