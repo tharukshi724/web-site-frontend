@@ -1,81 +1,34 @@
+import React, { useState } from 'react';
 import '../Css/FAQ.css';
-import React, { useEffect } from 'react';
 
 const FAQ = () => {
-  
- 
+  const [activeIndex, setActiveIndex] = useState(null);
 
-    const acc = document.getElementsByClassName("accordion");
-    for (let i = 0; i < acc.length; ++i) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        this.parentElement.classList.toggle("active");
-        console.log("Hiii")
-        let panel = this.nextElementSibling;
-        // panel.classList.toggle("active");
-         console.log("panel.style.display",panel.style.display)
-        if(panel.style.display === "block"){
-          panel.style.display = "none";
-        }else{
-          panel.style.display = "block";
-        }
-      });
-    }
+  const handleToggle = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
-   
- 
+  const faqs = [
+    { question: "What is first?", answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries," },
+    { question: "What is second?", answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries," },
+    { question: "What is third?", answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries," },
+    { question: "What is fourth?", answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries," },
+  ];
 
   return (
     <div className="wrapper">
       <h1>Frequently Asked Questions</h1>
-      <div className="faq">
-        <button className="accordion">
-          What is first?
-          <i></i>
-        </button>
-        <div className="panel">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type 
-            specimen book. It has survived not only five centuries,</p>
+      {faqs.map((faq, index) => (
+        <div className={`faq ${activeIndex === index ? 'active' : ''}`} key={index}>
+          <button className="accordion" onClick={() => handleToggle(index)}>
+            {faq.question}
+            <i>{activeIndex === index ? '-' : '+'}</i>
+          </button>
+          <div className="panel" style={{ display: activeIndex === index ? 'block' : 'none' }}>
+            <p>{faq.answer}</p>
+          </div>
         </div>
-      </div>
-      <div className="faq">
-        <button className="accordion">
-          What is second?
-          <i></i>
-        </button>
-        <div className="panel">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type 
-            specimen book. It has survived not only five centuries,</p>
-        </div>
-      </div>
-      <div className="faq">
-        <button className="accordion">
-          What is third?
-          <i></i>
-        </button>
-        <div className="panel">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type 
-            specimen book. It has survived not only five centuries,</p>
-        </div>
-      </div>
-      <div className="faq">
-        <button className="accordion">
-          What is fourth?
-          <i></i>
-        </button>
-        <div className="panel">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type 
-            specimen book. It has survived not only five centuries,</p>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

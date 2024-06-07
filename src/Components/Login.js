@@ -1,37 +1,34 @@
 import '../Css/Login.css';
-const Login =()=>{
-
- return(
-    <div className="container">
-        <div className="form-box">
-            <h1 id="title">Sign In</h1>
-            <form>
-                <div className="input-group">
-                    <div className="input-field" id="NameField">
-                       <i></i>
-                       <input type="text" placeholder="Name" ></input>
+import { Link } from 'react-router-dom';
+const Login = () => {
+    return (
+        <div className="container-login">
+            <div className="form-box">
+                <h1 id="title">Sign In</h1>
+                <form>
+                    <div className="input-group">
+                        <div className="input-field" id="NameField">
+                            <i></i>
+                            <input type="text" placeholder="Name" />
+                        </div>
+                        <div className="input-field">
+                            <i></i>
+                            <input type="email" placeholder="Email" />
+                        </div>
+                        <div className="input-field">
+                            <i></i>
+                            <input type="password" placeholder="Password" />
+                        </div>
                     </div>
-                    <div className="input-field">
-                       <i></i>
-                       <input type="email" placeholder="Email"></input>
-                    </div>
-                    <div className="input-field">
-                       <i></i>
-                       <input type="password" placeholder="Password"></input>
-                    </div>
-
-                </div>
-                <div className="btn-field">
+                    <div className="btn-field">
+                    <button type="button" id="signinBtn"><Link to="/Login">Log In</Link></button>
+                  <button type="button" id="signinBtn"><Link to="/SignUp">Sign Up</Link></button>
                  
-                  <button type="button" id="signinBtn"> SignIn</button>
-                  <button type="button" id="signinBtn"> SignUp</button>
-                </div>
-            </form>
-
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
- )
-
+    );
 }
 
-export default Login
+export default Login;
