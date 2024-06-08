@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import "../Css/jobList.css"
-import { FiDollarSign } from 'react-icons/fi'
+import "../Css/jobList.css";
+import { FiDollarSign } from 'react-icons/fi';
+
 const PartnershipOpportunities = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [opportunitiesPerPage] = useState(6);
@@ -61,10 +62,7 @@ const PartnershipOpportunities = () => {
                                 <div className='roundBtn'>{opportunity.salary}</div>
                             </div>
                         </div>
-
-
                         </div>
-                      
                         <div className="tags-column">
                             {opportunity.tags.map(tag => (
                                 <div className="tag" key={tag}>{tag}</div>
