@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaFacebook, FaTwitter, FaCopy } from 'react-icons/fa';
 import '../Css/JobPostForm.css';
+import { Content } from 'antd/es/layout/layout';
 
 const JobPostForm = () => {
   const [jobTitle, setJobTitle] = useState('');
@@ -55,6 +56,7 @@ const JobPostForm = () => {
               value={jobDescription}
               onChange={(e) => setJobDescription(e.target.value)}
               required
+              
             ></textarea>
           </label>
 
@@ -111,7 +113,7 @@ const JobPostForm = () => {
               required
             />
           </label>
-
+          <Content>
           <h2>COMPANY INFORMATION</h2>
 
           <label>
@@ -145,12 +147,16 @@ const JobPostForm = () => {
               required
             />
           </label>
-
+          </Content>
+         
+         
+        </form>
+        <Content>
           <div className="form-actions">
             <button type="button" className="cancel-button">Cancel</button>
             <button type="submit" className="continue-button">Continue</button>
           </div>
-        </form>
+          </Content>
       </div>
     </div>
     </div>
