@@ -8,7 +8,7 @@ import '../Css/footer.css';
 function Footer() {
   return (
     <footer className="footer">
-    <div className="container">
+    <div className="footer-container">
         <div className="row">
             <div className="footer-col">
                 <h4>company</h4>
@@ -31,7 +31,7 @@ function Footer() {
             <div className="footer-col">
                 <h4>Web Site</h4>
                 <ul>
-                <li><Link to="/Home">Home</Link></li>
+                <li><Link to="/">Home</Link></li>
               <li><Link to="/PartnershipOpportunities">Opportunity</Link></li>
               <li><Link to="/JobPosting">View opportunity</Link></li>
               <li><Link to="/ProfileForm">Profile</Link></li>

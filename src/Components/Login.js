@@ -7,17 +7,17 @@ const Login = () => {
                 <h1 id="title">Sign In</h1>
                 <form>
                     <div className="input-group">
-                        <div className="input-field" id="NameField">
+                        <div className="signup-input-field" id="NameField">
                             <i></i>
-                            <input type="text" placeholder="Name" />
+                            <input className="signup" type="text" placeholder="Name" />
                         </div>
                         <div className="input-field">
                             <i></i>
-                            <input type="email" placeholder="Email" />
+                            <input className="signup" type="email" placeholder="Email" />
                         </div>
                         <div className="input-field">
                             <i></i>
-                            <input type="password" placeholder="Password" />
+                            <input  className="signup"type="password" placeholder="Password" />
                         </div>
                     </div>
                     <div className="btn-field">

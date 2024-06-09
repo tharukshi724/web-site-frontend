@@ -1,6 +1,7 @@
 .contact-form-container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px 0 20px 0;
+    align-items: center;
     padding: 20px;
     background-color: #f8f4e5;
     border-radius: 10px;
@@ -34,7 +35,7 @@
   }
   
   .contact-form button {
-    background-color: #000;
+    background-color: #fa8128;
     color: #fff;
     padding: 10px;
     border: none;
@@ -44,6 +45,6 @@
   }
   
   .contact-form button:hover {
-    background-color: #333;
+    background-color: #fa8128;
   }
   

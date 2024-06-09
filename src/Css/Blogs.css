@@ -53,6 +53,7 @@ body {
     background: #ffffff;
     border: 1px solid #ececec;
     margin: 20px 20px 20px 20px;
+    border-radius: 10px;
 }
 
 .blog-img {
@@ -79,7 +80,7 @@ body {
 }
 
 .blog-text .blog-title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: #272727;
 }

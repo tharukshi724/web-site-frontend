@@ -1,10 +1,27 @@
-import React from 'react';
+import React,{useState} from 'react';
 import '../Css/profileInformation.css';
 
 const ProfileForm = () => {
+  const [showForm, setShowForm] = useState(true);
+  const [currentSection, setCurrentSection] = useState('profile');
+
+  const handleNavigationClick = (section) => {
+    setShowForm(section);
+    setShowForm(section === 'profile'); 
+  };
+
   return (
     <div className="form-container">
       <header>Profile Information</header>
+      <nav className="side-nav">
+        <ul>
+          <li><a href="#dashboard" onClick={() => handleNavigationClick('profile')}>Dashboard</a></li>
+          <li><a href="#subscriptions" onClick={() => handleNavigationClick('profile')}>Opportunities List</a></li>
+          <li><a href="#orders" onClick={() => handleNavigationClick('proposals')}>Proposals</a></li>
+          <li><a href="#billing" onClick={() => handleNavigationClick('profile')}>Change Password</a></li>
+        </ul>
+      </nav>
+      {showForm ? (
       <form>
         <div className="form-columns">
           <div className="form-section left-column">
@@ -14,6 +31,14 @@ const ProfileForm = () => {
                 <label htmlFor="profilePic" className="upload-button">+</label>
               </div>
               <label className="profile-pic-label">Profile Picture</label>
+              <div className="toggle-container">
+                <label htmlFor="anonymous">Anonymous</label>
+                <label className="switch">
+                  <input type="checkbox" id="anonymous" name="anonymous" />
+                  <span className="slider"></span>
+                </label>
+              </div>
+             
             </div>
           </div>
 
@@ -80,14 +105,47 @@ const ProfileForm = () => {
               <textarea id="marketingChannels" name="marketingChannels" />
             </div>
             <div className="form-group">
-              <label htmlFor="collaborationPreferences">Collaboration Preferences:</label>
-              <textarea id="collaborationPreferences" name="collaborationPreferences" />
+              <label htmlFor="additionalInfo">Additional Information:</label>
+              <textarea id="additionalInfo" name="additionalInfo" />
             </div>
           </div>
         </div>
 
         <button type="submit">Submit</button>
       </form>
+        ) : (
+          <div className="proposals-section">
+          <table>
+            <thead>
+              <tr>
+                <th>Job Title</th>
+                <th>Company</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Frontend Developer</td>
+                <td>Tech Company</td>
+                <td className="button-container">
+                  <button className="view-button">View</button>
+                  <button className="accept-button">Accept</button>
+                </td>
+              </tr>
+              {/* Add more rows as needed */}
+            </tbody>
+          </table>
+        </div>
+        )}
+         {currentSection === 'subscriptions' && (
+        <div>
+          {/* Display current subscription information */}
+          <p>Current subscription: Premium Plan</p>
+          {/* Buttons to cancel or pause subscription */}
+          <button>Cancel Subscription</button>
+          <button>Pause Subscription</button>
+        </div>
+      )}
     </div>
   );
 };

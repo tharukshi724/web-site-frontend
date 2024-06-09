@@ -21,10 +21,9 @@ const Blogs = () => {
                         <img src={abc} alt="blog" />
                     </div>
                     <div className="blog-text">
-                        <span>18 Sep 2021 / Web</span>
+                        <span>Design to code</span>
                         <a href="#" className="blog-title">What is Blog 01 about ?</a>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                        <a href="#" className="blog-title">Read More</a>
+                        
                     </div>
                 </div>
                 <div className="blog-box">
@@ -32,10 +31,10 @@ const Blogs = () => {
                         <img src={blog01} alt="blog" />
                     </div>
                     <div className="blog-text">
-                        <span>18 Sep 2021 / Web</span>
+                        <span>Design to code</span>
                         <a href="#" className="blog-title">What is Blog 02 about ?</a>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                        <a href="#" className="blog-title">Read More</a>
+                       
+                       
                     </div>
                 </div>
                 <div className="blog-box">
@@ -43,10 +42,9 @@ const Blogs = () => {
                         <img src={blog02} alt="blog" />
                     </div>
                     <div className="blog-text">
-                        <span>18 Sep 2021 / Web</span>
+                        <span>Design to code</span>
                         <a href="#" className="blog-title">What is Blog 03 about ?</a>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                        <a href="#" className="blog-title">Read More</a>
+                       
                     </div>
                 </div>
                 <div className="blog-box">
@@ -56,8 +54,8 @@ const Blogs = () => {
                     <div className="blog-text">
                         <span>18 Sep 2021 / Web</span>
                         <a href="#" className="blog-title">What is Blog 04 about ?</a>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                        <a href="#" className="blog-title">Read More</a>
+                       
+                       
                     </div>
                 </div>
             </div>

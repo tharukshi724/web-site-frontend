@@ -1,23 +1,111 @@
+/* Navbar.css */
 
-	
-		.navbar{
-			background: crimson; font-family: calibri; padding-right: 15px;padding-left: 15px;
-		}
-		.navdiv{
-			display: flex; align-items: center; justify-content: space-between;
-		}
-		.logo a{
-			font-size: 35px; font-weight: 600; color: white;
-		}
-		.nav-li li{
-			list-style: none; display: inline-block;
-		}
-		.nav-li li a{
-			color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
-		}
-		button{
-			background-color: black; margin-left: 10px; border-radius: 10px; padding: 10px; width: 90px;
-		}
-		button a{
-			color: white; font-weight: bold; font-size: 15px;
-		}
+.navbar {
+    background: #2c3e50; /* Light gray background */
+    font-family: Calibri, sans-serif;
+    padding: 10px 15px; /* Increase padding for height */
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    height: 40px; /* Adjust size as needed */
+    margin-right: 10px;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .navbar-item {
+    margin-left: 15px;
+  }
+  
+  .navbar-item a {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar-btn {
+    background-color: transparent; /* Initially transparent background */
+    border: 2px solid rgb(239, 152, 64); /* Orange border */
+    border-radius: 5px;
+    padding: 5px 10px; /* Increase padding for better size */
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+  
+  .navbar-btn a {
+    color: rgb(239, 152, 64); /* Orange text */
+    font-size: 12px;
+    text-decoration: none;
+  }
+  
+  .navbar-btn:hover {
+    background-color: rgb(239, 152, 64); /* Orange background on hover */
+  }
+  
+  .navbar-btn:hover a {
+    color: white; /* White text on hover */
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger div {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 4px;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #e4e6e9;
+      z-index: 1000;
+    }
+  
+    .navbar-menu.active {
+      display: flex;
+    }
+  
+    .navbar-item {
+      margin: 10px 0;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .navbar-container {
+      justify-content: space-between;
+    }
+  }
+  
