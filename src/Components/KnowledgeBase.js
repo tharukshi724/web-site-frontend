@@ -44,7 +44,7 @@ const KnowledgeBase = () => {
           </ul>
         </div>
       </div>
-      <div className="chat-icon">?</div>
+    
     </div>
   );
 }

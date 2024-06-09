@@ -31,7 +31,7 @@ function Footer() {
             <div className="footer-col">
                 <h4>Web Site</h4>
                 <ul>
-                <li><Link to="/home">Home</Link></li>
+                <li><Link to="/Home">Home</Link></li>
               <li><Link to="/PartnershipOpportunities">Opportunity</Link></li>
               <li><Link to="/JobPosting">View opportunity</Link></li>
               <li><Link to="/ProfileForm">Profile</Link></li>

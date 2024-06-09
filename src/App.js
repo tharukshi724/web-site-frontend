@@ -13,17 +13,18 @@ import Home from './Components/Home';
 import Footer from './Components/Footer';
 import JoinTheClub from './Components/WhyJoin';
 import AboutUs from './Components/AboutUs';
+import Login from './Components/Login';
+import Signup from './Components/SignUp';
 import HowItWorksPage from './Components/howItsWork';
-// import Login from './Components/Login';
-// import Signup from './Components/SignUp';
 
 function App() {
   return (
     <div>
      <Router>
+   
      <Routes>
     <Route path="/home" element={<Home/>} />
-    <Route path="/about-us" component={AboutUs} />
+    <Route path="/about-us" element={<AboutUs/>} />
     <Route path="/ContactForm" element={<ContactForm/>} />
     <Route path="/ProfileForm" element={<ProfileForm/>} />
     <Route path="/JobPosting" element={<JobPosting/>} />
@@ -33,13 +34,13 @@ function App() {
     <Route path="/Resources" element={<Resources/>} />
     <Route path="/PartnershipOpportunities" element={<PartnershipOpportunities/>} />
     <Route path="/JobPostForm" element={<JobPostForm/>} />
-     {/* <Route path="3000/login" element={<Login/>} /> */}
-     {/* <Route path = "/login" element={<Login/>}/> */}
+    <Route path="/JoinTheClub" element={<JoinTheClub/>}/>
+    <Route path="/Login" element={<Login/>}/>
+    <Route path="/Signup" element={<Signup/>}/>
 
-    {/* <Route path="/Signup" element={<Signup/>} /> */}
 
     </Routes>
-        {/* <Footer /> */}
+        <Footer />
         {/* <JoinTheClub/> */}
         {/* <AboutUs/> */}
         {/* <PartnershipOpportunities/> */}
