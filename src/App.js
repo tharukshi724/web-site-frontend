@@ -1,6 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import FAQ from './Components/FAQ';
-// import AboutUs from './Components/AboutUs';
 import ContactForm from './Components/ContactForm';
 import ProfileForm from './Components/ProfileForm';
 import JobPosting from './Components/PartnershipOpportunities';
@@ -16,39 +15,44 @@ import AboutUs from './Components/AboutUs';
 import Login from './Components/Login';
 import Signup from './Components/SignUp';
 import HowItWorksPage from './Components/howItsWork';
+import Navbar from './Components/Navbar';
+import CheckoutForm from './Components/CheckoutForm';
+
+const AppContent = () => {
+  const location = useLocation();
+  const noNavbarPaths = ['/', '/Login', '/Signup'];
+
+  return (
+    <div>
+      {!noNavbarPaths.includes(location.pathname) && <Navbar />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/ContactForm" element={<ContactForm />} />
+        <Route path="/ProfileForm" element={<ProfileForm />} />
+        <Route path="/HowItWorksPage" element={<HowItWorksPage />} />
+        <Route path="/JobPosting" element={<JobPosting />} />
+        <Route path="/FAQ" element={<FAQ />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/KnowledgeBase" element={<KnowledgeBase />} />
+        <Route path="/Resources" element={<Resources />} />
+        <Route path="/PartnershipOpportunities" element={<PartnershipOpportunities />} />
+        <Route path="/JobPostForm" element={<JobPostForm />} />
+        <Route path="/JoinTheClub" element={<JoinTheClub />} />
+        <Route path="/CheckoutForm" element={<CheckoutForm />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Signup" element={<Signup />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div>
-     <Router>
-   
-     <Routes>
-    <Route path="/home" element={<Home/>} />
-    <Route path="/about-us" element={<AboutUs/>} />
-    <Route path="/ContactForm" element={<ContactForm/>} />
-    <Route path="/ProfileForm" element={<ProfileForm/>} />
-    <Route path="/JobPosting" element={<JobPosting/>} />
-    <Route path="/FAQ" element={<FAQ/>} />
-    <Route path="/blog" element={<Blog/>} />
-    <Route path="/KnowledgeBase" element={<KnowledgeBase/>} />
-    <Route path="/Resources" element={<Resources/>} />
-    <Route path="/PartnershipOpportunities" element={<PartnershipOpportunities/>} />
-    <Route path="/JobPostForm" element={<JobPostForm/>} />
-    <Route path="/JoinTheClub" element={<JoinTheClub/>}/>
-    <Route path="/Login" element={<Login/>}/>
-    <Route path="/Signup" element={<Signup/>}/>
-
-
-    </Routes>
-        <Footer />
-        {/* <JoinTheClub/> */}
-        {/* <AboutUs/> */}
-        {/* <PartnershipOpportunities/> */}
-        {/* <Home/> */}
-        {/* <HowItWorksPage/> */}
-       
+    <Router>
+      <AppContent />
     </Router>
-    </div>
   );
 }
 

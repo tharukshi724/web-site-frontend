@@ -1,6 +1,6 @@
 .container {
   font-family: Arial, sans-serif;
-  padding: 20px;
+  padding: 20px 0 100px 0;
 }
 
 .header {
@@ -10,6 +10,9 @@
   text-align: center;
   margin-bottom: 40px;
   padding: 0 20px;
+  background-color: #f8f8f8; /* Add background color for better visibility */
+  padding: 20px; /* Increase padding */
+  border-radius: 10px; /* Add border radius for rounded corners */
 }
 
 .header h1 {
@@ -33,23 +36,43 @@
   margin-top: 20px;
 }
 
-.partner-directory {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .filters {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.filters select,
-.filters input {
+.filters .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.custom-select {
+  flex: 1;
+  min-width: 150px;
+  margin-right: 10px; /* Add margin between selects */
+}
+
+.search-sort-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.search-bar {
+  width: 75%; /* Take most of the width */
   padding: 10px;
-  margin-right: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-right: 10px; /* Add space between search bar and sort dropdown */
+}
+
+.sort-by {
+  width: 23%; /* Ensure it fits alongside the search bar */
+}
+
+.partner-directory {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .partners {
@@ -66,6 +89,16 @@
   flex: 1;
   min-width: 300px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center-align text */
+  cursor:pointer
+}
+
+.partner-card img {
+  max-width: 100%;
+  max-height: 150px; /* Set a maximum height for the images */
+  object-fit: contain; /* Ensure the images maintain their aspect ratio */
+  border-radius: 5px; /* Optional: add border radius to the image */
+  margin-bottom: 15px; /* Add space below the image */
 }
 
 .partner-card h3 {
@@ -94,7 +127,6 @@
 }
 
 /* Media Queries for Responsive Design */
-
 @media (max-width: 768px) {
   .header h1 {
     font-size: 2rem;
@@ -107,6 +139,18 @@
   .become-partner {
     padding: 8px 16px;
     font-size: 0.9rem;
+  }
+
+  .filters .row {
+    flex-direction: column; /* Stack filters vertically on smaller screens */
+    align-items: stretch; /* Stretch filters to fill container */
+  }
+
+  .filters .row > .custom-select,
+  .filters .row > .search-bar,
+  .filters .row > .sort-by {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add bottom margin */
   }
 }
 
@@ -125,5 +169,14 @@
     padding: 6px 12px;
     font-size: 0.8rem;
     margin-top: 10px;
+  }
+
+  .search-sort-row {
+    flex-direction: column; /* Stack search and sort vertically */
+  }
+
+  .search-bar, .sort-by {
+    width: 100%; /* Full width for smaller screens */
+    margin-bottom: 10px; /* Add bottom margin */
   }
 }

@@ -7,19 +7,15 @@ const Signup = () => {
     <div className="container-signup">
         <div className="form-box">
             <h1 id="title">Sign Up</h1>
-            <form>
+            <form className="signUp-Form">
                 <div className="input-group">
-                    <div className="input-field" id="NameField">
+                    <div className="signup-input-field" id="NameField">
                        <i></i>
                        <input type="text" placeholder="Name" ></input>
                     </div>
                     <div className="input-field">
                        <i></i>
                        <input type="email" placeholder="Email"></input>
-                    </div>
-                    <div className="input-field">
-                       <i></i>
-                       <input type="password" placeholder="Password"></input>
                     </div>
 
                 </div>

@@ -52,7 +52,7 @@
     margin-bottom: 20px;
 }
 
-.input-field{
+.signup-input-field{
     background: #eaeaea;
     margin:15px 0;
     border-radius:3px;
@@ -62,7 +62,7 @@
     width: 100%; /* Make sure input-field takes full width */
 }
 
-input{
+.signup input{
     width:100%; /* Ensure the input takes full width of input-field */
     background: transparent;
     border:0;
