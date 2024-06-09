@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import '../Css/AboutUs.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import 'swiper/css/navigation';
+
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
+import {  Pagination } from 'swiper/modules';
 import { Layout, Typography, Row, Col, Button } from 'antd';
 import { LoginOutlined } from '@ant-design/icons';
 
@@ -67,9 +67,8 @@ const AboutUs = () => {
                 <Swiper
                     spaceBetween={30}
                     slidesPerView={slidesPerView}
-                    navigation
                     pagination={{ clickable: true }}
-                    modules={[Navigation, Pagination]}
+                    modules={[ Pagination]}
                     className="carousel"
                 >
                     {Array.from({ length: 6 }).map((_, index) => (

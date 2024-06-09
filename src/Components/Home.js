@@ -3,6 +3,9 @@ import { Layout, Menu, Input, Row, Col, Drawer, Button, Carousel,Typography, Car
 import { Link } from 'react-router-dom';
 import { MenuOutlined } from '@ant-design/icons';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+import 'swiper/css/pagination';
+import {Pagination } from 'swiper/modules';
 import { CheckOutlined } from '@ant-design/icons';
 
 import '../Css/Home.css';
@@ -204,32 +207,33 @@ const Home = () => {
       </Content>
         
      {/* third Section */}
-        <div className="swiper-section-Home">
-      <h2>Our Success Stories</h2>
-      <Swiper
-        spaceBetween={20}
-        slidesPerView={slidesPerView}
-        navigation
-        pagination={{ clickable: true }}
-        className="carousel"
-      >
-       {[...Array(6)].map((_, index) => (
-          <SwiperSlide key={index} className="carousel-item">
-            <div className="card-container">
-              <div className="card">
-                <div className="cardImg" />
-                <div className="card-content-Home">
-                  <p className="cardTitle">Text Content Here</p>
-                  <p className="cardContentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod.</p>
-                </div>
-              </div>
+      
+
+    <div className="swiper-section-Home">
+    <h2>Our Success Stories</h2>
+                <Swiper
+                    spaceBetween={30}
+                    slidesPerView={slidesPerView}
+          
+                    pagination={{ clickable: true }}
+                    modules={[ Pagination]}
+                    className="carousel"
+                >
+                    {Array.from({ length: 6 }).map((_, index) => (
+                        <SwiperSlide key={index} className="carousel-item">
+                            <div className="card-container">
+                                <div className="card">
+                                    <div className="cardImg" />
+                                    <div className="card-content-About">
+                                        <p className='cardTitle'>Text Content Here</p>
+                                        <p className='cardContentText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
-          </SwiperSlide>
-        ))}
-     
-    
-      </Swiper>
-    </div>
 
     {/* fourth Section */}
     <div className="swiper-section-second">
@@ -237,8 +241,9 @@ const Home = () => {
       <Swiper
         spaceBetween={20}
         slidesPerView={slidesPerViewSecond}
-        navigation
+       
         pagination={{ clickable: true }}
+        modules={[ Pagination]}
         className="carousel"
       >
         {[...Array(6)].map((_, index) => (
@@ -265,9 +270,10 @@ const Home = () => {
       <Swiper
         spaceBetween={20}
         slidesPerView={slidesPerViewThird}
-        navigation
         pagination={{ clickable: true }}
+        modules={[ Pagination]}
         className="carousel"
+       
       >
         {[...Array(6)].map((_, index) => (
           <SwiperSlide key={index} className="carousel-item">

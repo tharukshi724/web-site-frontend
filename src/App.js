@@ -13,6 +13,7 @@ import Home from './Components/Home';
 import Footer from './Components/Footer';
 import JoinTheClub from './Components/WhyJoin';
 import AboutUs from './Components/AboutUs';
+import HowItWorksPage from './Components/howItsWork';
 // import Login from './Components/Login';
 // import Signup from './Components/SignUp';
 
@@ -22,7 +23,7 @@ function App() {
      <Router>
      <Routes>
     <Route path="/home" element={<Home/>} />
-    {/* <Route path="/about-us" component={AboutUs} /> */}
+    <Route path="/about-us" component={AboutUs} />
     <Route path="/ContactForm" element={<ContactForm/>} />
     <Route path="/ProfileForm" element={<ProfileForm/>} />
     <Route path="/JobPosting" element={<JobPosting/>} />
@@ -32,13 +33,18 @@ function App() {
     <Route path="/Resources" element={<Resources/>} />
     <Route path="/PartnershipOpportunities" element={<PartnershipOpportunities/>} />
     <Route path="/JobPostForm" element={<JobPostForm/>} />
-    {/* <Route path="/Login" element={<Login/>} />
-    <Route path="/Signup" element={<Signup/>} /> */}
+     {/* <Route path="3000/login" element={<Login/>} /> */}
+     {/* <Route path = "/login" element={<Login/>}/> */}
+
+    {/* <Route path="/Signup" element={<Signup/>} /> */}
 
     </Routes>
         {/* <Footer /> */}
         {/* <JoinTheClub/> */}
-        <AboutUs/>
+        {/* <AboutUs/> */}
+        {/* <PartnershipOpportunities/> */}
+        {/* <Home/> */}
+        {/* <HowItWorksPage/> */}
        
     </Router>
     </div>

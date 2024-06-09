@@ -369,12 +369,14 @@ body {
 
 .carousel {
   padding: 0px;
+  
 }
 
 .carousel-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .carousel-image {
@@ -495,6 +497,22 @@ body {
   margin-top: 10px;
   line-height: 20px;
 }
+.swiper-pagination {
+  margin-top: 200px; 
+}
+.swiper-pagination-bullet {
+  background-color: #ccc; /* Default color of dots */
+  width: 9px;
+  height: 9px;
+  opacity: 1; /* Ensure dots are fully visible */
+ 
+ 
+}
+.swiper-pagination-bullet-active {
+  background-color: #007bff; /* Active dot color */
+  width: 9px; /* Increase size of active dot */
+  height: 9px; /* Increase size of active dot */
+}
 
 @media (max-width: 768px) {
   .cardSecond {
@@ -521,7 +539,20 @@ body {
   .swiper-section-second {
     padding: 10px 5px;
   }
+  .carousel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carousel-control-prev {
+    left: 10px;
+  }
+
+  .carousel-control-next {
+    right: 10px;
+  }
 }
+
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .cardSecond {
