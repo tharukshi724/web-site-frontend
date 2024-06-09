@@ -1,8 +1,8 @@
 .partnership-opportunities {
     font-family: Arial, sans-serif;
-    margin: 0 ;
+    margin: 0;
     padding: 50px;
-   width: 100%;
+    width: 100%;
 }
 
 .partnership-opportunities h1 {
@@ -23,6 +23,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    /* flex-wrap: wrap; */
 }
 
 .search-bar input {
@@ -31,6 +32,7 @@
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
     outline: none;
+    min-width: 200px;
 }
 
 .search-bar button {
@@ -40,7 +42,7 @@
     color: white;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
-    width: 50px
+    width: auto;
 }
 
 .opportunity-list {
@@ -53,21 +55,22 @@
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 20px;
-    padding: 10px 20px ;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.imageContent{
+
+.imageContent {
     display: flex;
     align-items: center;
-    
-
+    flex-wrap: wrap;
 }
 
 .opportunity-details {
     flex: 1;
+    min-width: 200px;
 }
 
 .tags-column, .posted-column {
@@ -75,6 +78,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .tag {
@@ -82,7 +86,8 @@
     border: 3px solid black;
     border-radius: 20px;
     padding: 3px 10px;
-    margin: 5px 10px 5px 0px;
+    margin: 5px 10px 5px 0;
+    min-width: 50px;
 }
 
 .pagination {
@@ -141,19 +146,39 @@
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+    .partnership-opportunities {
+        padding: 20px;
+    }
+
     .opportunity-card {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        justify-content:center ;
     }
 
     .tags-column, .posted-column {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         width: 100%;
         margin-top: 10px;
     }
 
     .tag {
-        margin: 5
+        margin: 5px;
+    }
+
+    .btnContainer {
+        flex-direction: column;
+        align-items: center
+    }
+
+    .roundBtn {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .imageContent{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }

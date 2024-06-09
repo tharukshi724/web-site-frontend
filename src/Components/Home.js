@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Layout, Menu, Input, Row, Col, Drawer, Button, Carousel,Typography, Card,List,Switch } from 'antd';
 import { Link } from 'react-router-dom';
 import { MenuOutlined } from '@ant-design/icons';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+import 'swiper/css/pagination';
+import {Pagination } from 'swiper/modules';
 import { CheckOutlined } from '@ant-design/icons';
 
 import '../Css/Home.css';
@@ -51,18 +54,73 @@ const Home = () => {
   const handleMenuClick = (e) => {
     setSelectedKey([e.key]);
   };
-  const slidesPerView = window.innerWidth < 768 ? 1 : 5; 
-  const slidesPerViewSecond = window.innerWidth < 768 ? 1 : 2; 
-  const slidesPerViewThird = window.innerWidth < 768 ? 1 : 4; 
+  const [slidesPerView, setSlidesPerView] = useState(5);
+  const [slidesPerViewSecond, setSlidesPerViewSecond] = useState(3);
+  const [slidesPerViewThird, setSlidesPerViewThird] = useState(3);
+
   const [isAnnually, setIsAnnually] = useState(false);
 
   const handleSwitchChange = (checked) => {
     setIsAnnually(checked);
   };
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setSlidesPerView(1);
+      } else if (window.innerWidth < 1024) {
+        setSlidesPerView(2);
+      } else {
+        setSlidesPerView(4);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setSlidesPerViewSecond(1);
+      } else if (window.innerWidth < 1024) {
+        setSlidesPerViewSecond(1);
+      } else {
+        setSlidesPerViewSecond(2);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setSlidesPerViewThird(1);
+      } else if (window.innerWidth < 1024) {
+        setSlidesPerViewThird(2);
+      } else {
+        setSlidesPerViewThird(3);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <Layout className="layout">
-      <Header className='header'>
+      <Header className='headerHome'>
         <div className="logo" />
         <div className="desktop-menu">
           <Menu
@@ -80,10 +138,10 @@ const Home = () => {
           </Menu>
         </div>
         <div className="mobile-menu">
-          <Button type="primary" icon={<MenuOutlined />} onClick={showDrawer} />
+          <Button type="primary" icon={<MenuOutlined   />} className='menuIcon'  onClick={showDrawer} />
           <Drawer
             title="Menu"
-            placement="right"
+            placement="left"
             onClose={onClose}
             visible={visible}
           >
@@ -105,9 +163,9 @@ const Home = () => {
       <Content>
         <div>
           <Row gutter={20} className="site-layout-content" >
-            <Col  xs={24} sm={24} md={12} lg={12} xl={12} className='leftContent'>
+            <Col  xs={24} sm={24} md={12} lg={12} xl={12} className='leftContentHome'>
               <h6 className='mainhead'>Supercharge your brand's success </h6>
-              <h6 className='subMidTitle'>with collaborative partnerships!</h6>
+              <h6 className='subMidTitleHome'>with collaborative partnerships!</h6>
               <h6 className='subHead'>Join forces to drive revenue, attract followers, and skyrocket growth!"</h6> 
               <div className='serchContent'>
               <Search
@@ -132,10 +190,10 @@ const Home = () => {
         <div>
           <Row gutter={20} className="siteBanner" >
             <Col  xs={24} sm={24} md={12} lg={12} xl={12} className='leftContent '>
-              <h6 className='mainheadSecond'>Collaborate with Us </h6>
-              <h6 className='subMidTitleSecond'>Helping brands increase revenue</h6>
+              <h6 className='mainheadSecondHome'>Collaborate with Us </h6>
+              <h6 className='subMidTitleSecondHome'>Helping brands increase revenue</h6>
               <h6 className='subHeadSecond'>Join forces to drive revenue, "</h6> 
-              <Button type="primary" className='btnLearn'>Learn More</Button>
+              <Button type="primary" className='btnLearnSignUp'>Learn More</Button>
               <div className='serchContent'>
            
               </div>
@@ -149,232 +207,82 @@ const Home = () => {
       </Content>
         
      {/* third Section */}
-        <div className="swiper-section">
-      <h2>Our Success Stories</h2>
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={slidesPerView}
-        navigation
-        pagination={{ clickable: true }}
-        className="carousel"
-      >
-        <SwiperSlide className="carousel-item">
-        <div className="card-container">
-      <div className="card">
-      <div className="cardImg" />
-        <div className="card-content-Home">
-          <p className='cardTitle'>Text Content Here</p>
-        <p className='cardContentText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod .</p>
-        </div>
-      </div>
-    </div>
-        </SwiperSlide>
       
-        <SwiperSlide className="carousel-item">
-        <div className="card-container">
-      <div className="card">
-      <div className="cardImg" />
-        <div className="card-content">
-          <p className='cardTitle'>Text Content Here</p>
-          <p className='cardContentText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod .</p>
-        </div>
-      </div>
-    </div>
-        </SwiperSlide>
-        <SwiperSlide className="carousel-item">
-        <div className="card-container">
-      <div className="card">
-      <div className="cardImg" />
-        <div className="card-content">
-          <p  className='cardTitle'>Text Content Here</p>
-          <p className='cardContentText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod .</p>
-        </div>
-      </div>
-    </div>
-        </SwiperSlide>
-        <SwiperSlide className="carousel-item">
-        <div className="card-container">
-      <div className="card">
-      <div className="cardImg" />
-        <div className="card-content">
-          <p  className='cardTitle'>Text Content Here</p>
-          <p className='cardContentText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod .</p>
-        </div>
-      </div>
-    </div>
-        </SwiperSlide>
-        <SwiperSlide className="carousel-item">
-        <div className="card-container">
-      <div className="card">
-      <div className="cardImg" />
-        <div className="card-content">
-          <p  className='cardTitle'>Text Content Here</p>
-          <p className='cardContentText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod .</p>
-        </div>
-      </div>
-    </div>
-        </SwiperSlide>
-        <SwiperSlide className="carousel-item">
-        <div className="card-container">
-      <div className="card">
-      <div className="cardImg" />
-        <div className="card-content">
-          <p  className='cardTitle'>Text Content Here</p>
-          <p className='cardContentText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod .</p>
-         
-        </div>
-      </div>
-    </div>
-        </SwiperSlide>
-      </Swiper>
-    </div>
+
+    <div className="swiper-section-Home">
+    <h2>Our Success Stories</h2>
+                <Swiper
+                    spaceBetween={30}
+                    slidesPerView={slidesPerView}
+          
+                    pagination={{ clickable: true }}
+                    modules={[ Pagination]}
+                    className="carousel"
+                >
+                    {Array.from({ length: 6 }).map((_, index) => (
+                        <SwiperSlide key={index} className="carousel-item">
+                            <div className="card-container">
+                                <div className="card">
+                                    <div className="cardImg" />
+                                    <div className="card-content-About">
+                                        <p className='cardTitle'>Text Content Here</p>
+                                        <p className='cardContentText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
 
     {/* fourth Section */}
     <div className="swiper-section-second">
       <h2 className='blueContentHead'>Marketers and SEO specialists all over the world 💕 us </h2>
       <Swiper
-        spaceBetween={50}
+        spaceBetween={20}
         slidesPerView={slidesPerViewSecond}
-        navigation
+       
         pagination={{ clickable: true }}
+        modules={[ Pagination]}
         className="carousel"
       >
-        <SwiperSlide className="carousel-item">
-        
-      <div className="cardSecond">
-     
-        <div className="card-content-second">
-          <div className='cardOwnerDetail'>
-            <img src= {require(`../images/Avater.jpg`)} className='avaterImg'/>
-            <div className='nameContent'>
-              <p className='ownername'>Alex Ostegjhghfrjfrgchjgf</p>
-              <p className='positionText'>CEO IT Agency</p>
-            </div>
-          </div>
-         
-        <p className='cardContentTextSecond'>I loved the [PRODUCT]. The best thing about it is that it [PRODUCT FEATURE]. I will be purchasing more in the future.</p>
-        </div>
-      </div>
-   
-        </SwiperSlide>
-        <SwiperSlide className="carousel-item">
-        
-        <div className="cardSecond">
-       
-          <div className="card-content-second">
-            <div className='cardOwnerDetail'>
-              <img src= {require(`../images/Avater.jpg`)} className='avaterImg'/>
-              <div className='nameContent'>
-                <p className='ownername'>Alex Ostegjhghfrjfrgchjgf</p>
-                <p className='positionText'>CEO IT Agency</p>
+        {[...Array(6)].map((_, index) => (
+          <SwiperSlide key={index} className="carousel-item">
+            <div className="cardSecond">
+              <div className="card-content-second">
+                <div className='cardOwnerDetail'>
+                  <img src={require('../images/Avater.jpg')} className='avaterImg' alt='avatar' />
+                  <div className='nameContent'>
+                    <p className='ownername'>Alex Ostegjhghfrjfrgchjgf</p>
+                    <p className='positionText'>CEO IT Agency</p>
+                  </div>
+                </div>
+                <p className='cardContentTextSecond'>I loved the [PRODUCT]. The best thing about it is that it [PRODUCT FEATURE]. I will be purchasing more in the future.</p>
               </div>
             </div>
-           
-          <p className='cardContentTextSecond'>I loved the [PRODUCT]. The best thing about it is that it [PRODUCT FEATURE]. I will be purchasing more in the future.</p>
-          </div>
-        </div>
-     
           </SwiperSlide>
-          <SwiperSlide className="carousel-item">
-        
-        <div className="cardSecond">
-       
-          <div className="card-content-second">
-            <div className='cardOwnerDetail'>
-              <img src= {require(`../images/Avater.jpg`)} className='avaterImg'/>
-              <div className='nameContent'>
-                <p className='ownername'>Alex Ostegjhghfrjfrgchjgf</p>
-                <p className='positionText'>CEO IT Agency</p>
-              </div>
-            </div>
-           
-          <p className='cardContentTextSecond'>I loved the [PRODUCT]. The best thing about it is that it [PRODUCT FEATURE]. I will be purchasing more in the future.</p>
-          </div>
-        </div>
-     
-          </SwiperSlide>
-          <SwiperSlide className="carousel-item">
-        
-        <div className="cardSecond">
-       
-          <div className="card-content-second">
-            <div className='cardOwnerDetail'>
-              <img src= {require(`../images/Avater.jpg`)} className='avaterImg'/>
-              <div className='nameContent'>
-                <p className='ownername'>Alex Ostegjhghfrjfrgchjgf</p>
-                <p className='positionText'>CEO IT Agency</p>
-              </div>
-            </div>
-           
-          <p className='cardContentTextSecond'>I loved the [PRODUCT]. The best thing about it is that it [PRODUCT FEATURE]. I will be purchasing more in the future.</p>
-          </div>
-        </div>
-     
-          </SwiperSlide>
-          <SwiperSlide className="carousel-item">
-        
-        <div className="cardSecond">
-       
-          <div className="card-content-second">
-            <div className='cardOwnerDetail'>
-              <img src= {require(`../images/Avater.jpg`)} className='avaterImg'/>
-              <div className='nameContent'>
-                <p className='ownername'>Alex Ostegjhghfrjfrgchjgf</p>
-                <p className='positionText'>CEO IT Agency</p>
-              </div>
-            </div>
-           
-          <p className='cardContentTextSecond'>I loved the [PRODUCT]. The best thing about it is that it [PRODUCT FEATURE]. I will be purchasing more in the future.</p>
-          </div>
-        </div>
-     
-          </SwiperSlide>
-      
-        
+        ))}
       </Swiper>
     </div>
      
      {/* fifth section */}
      <div className="swiper-section-white">
-      
       <Swiper
-        spaceBetween={50}
+        spaceBetween={20}
         slidesPerView={slidesPerViewThird}
-        navigation
         pagination={{ clickable: true }}
+        modules={[ Pagination]}
         className="carousel"
+       
       >
-        <SwiperSlide className="carousel-item">
-        <div className='arrowCradConatainer'>
-        <img src= {require(`../images/quote.png`)} className='quoteImg'/>
-        <p> This is a good segue to use after a project or presentation. The person’s response will often clue you in on their thoughts. Then, you can expand on the areas of improvement you noticed.</p>
-        </div>
-        </SwiperSlide>
-        <SwiperSlide className="carousel-item">
-        <div className='arrowCradConatainer'>
-        <img src= {require(`../images/quote.png`)} className='quoteImg'/>
-        <p> This is a good segue to use after a project or presentation. The person’s response will often clue you in on their thoughts. Then, you can expand on the areas of improvement you noticed.</p>
-        </div>
-        </SwiperSlide>
-        <SwiperSlide className="carousel-item">
-        <div className='arrowCradConatainer'>
-        <img src= {require(`../images/quote.png`)} className='quoteImg'/>
-        <p> This is a good segue to use after a project or presentation. The person’s response will often clue you in on their thoughts. Then, you can expand on the areas of improvement you noticed.</p>
-        </div>
-        </SwiperSlide>
-        <SwiperSlide className="carousel-item">
-        <div className='arrowCradConatainer'>
-        <img src= {require(`../images/quote.png`)} className='quoteImg'/>
-        <p> This is a good segue to use after a project or presentation. The person’s response will often clue you in on their thoughts. Then, you can expand on the areas of improvement you noticed.</p>
-        </div>
-        </SwiperSlide>
-        <SwiperSlide className="carousel-item">
-        <div className='arrowCradConatainer'>
-        <img src= {require(`../images/quote.png`)} className='quoteImg'/>
-        <p> This is a good segue to use after a project or presentation. The person’s response will often clue you in on their thoughts. Then, you can expand on the areas of improvement you noticed.</p>
-        </div>
-        </SwiperSlide>
-
+        {[...Array(6)].map((_, index) => (
+          <SwiperSlide key={index} className="carousel-item">
+            <div className='arrowCradConatainer'>
+              <img src={require('../images/quote.png')} className='quoteImg' alt='quote' />
+              <p>This is a good segue to use after a project or presentation. The person’s response will often clue you in on their thoughts. Then, you can expand on the areas of improvement you noticed.</p>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
 
@@ -384,7 +292,7 @@ const Home = () => {
           <Row gutter={20} className="siteBanner siteBannerSecond" >
             <Col  xs={24} sm={24} md={12} lg={12} xl={12} className='leftContent leftFour'>
               <h6 className='mainheadSecondSixth'>Website Monetization for Publishers </h6>
-              <Button type="primary" className='btnLearn'>Sign Up for Free</Button>
+              <Button type="primary" className='btnLearnSignUp'>Sign Up for Free</Button>
               <div className='serchContent'>
            
               </div>
@@ -398,7 +306,7 @@ const Home = () => {
       </Content>
 
       {/* sventh Section */}
-      <Content style={{ padding: '50px', textAlign: 'center' }}>
+      <Content style={{ padding: '50px 0px 50px 0px', textAlign: 'center' }}>
     
       <Row gutter={16} justify="center">
      

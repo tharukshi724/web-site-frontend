@@ -1,110 +1,80 @@
 .about-us-container {
     background-color: #ffffff;
-    padding: 0px 0px 0px 0px;
+    padding: 0;
     border-radius: 15px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-  }
-  
-  .bannerNewAbout {
+}
+
+.bannerNewAbout {
     background-color: #E5FCFA;
-    padding: 50px;
     border-radius: 15px;
     width: 100%;
     text-align: center;
     height: 40vh;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* margin-bottom: 40px; */
-  }
-  
-  .bannerNewAbout h2 {
+}
+
+.bannerNewAbout h2 {
     color: #333;
     font-weight: 700;
     font-size: 50px;
-  }
-  
-  .about-us-content {
+}
+
+.about-us-content {
     width: 100%;
     text-align: left;
-  }
-  .about-us-content-top{
+}
+
+.about-us-content-top {
     width: 100%;
     text-align: left;
     padding: 50px;
-  }
-  
-  .about-us-content-top h3 {
+}
+
+.about-us-content-top h3 {
     font-size: 32px;
     color: #333;
     font-weight: 700;
     margin-bottom: 20px;
-  }
-  
-  .about-us-content-top p {
+}
+
+.about-us-content-top p {
     font-size: 18px;
     color: #555;
     margin-bottom: 20px;
-  }
-  
-  @media (max-width: 768px) {
-    .about-us-container {
-      padding: 20px;
-    }
-  
-    .banner {
-      padding: 30px;
-    }
-  
-    .banner h2 {
-      font-size: 24px;
-    }
-  
-    .about-us-content h3 {
-      font-size: 28px;
-    }
-  
-    .about-us-content p {
-      font-size: 16px;
-    }
-  }
-  .swiper-section {
+}
+
+.swiper-section {
     padding: 20px 50px;
     background-color: #f5f5f5;
     text-align: center;
-  }
-  .carousel {
-    padding: 0px;
-  }
-  
-  .carousel-item {
+}
+
+.carousel {
+    padding: 0;
+}
+
+.carousel-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .carousel-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 16px;
-  }
-  
-  
-  
-  .card-container {
+}
+
+.card-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50vh;
-  }
-  
-  .card {
-    width: 230px;
-    height: 250px;
+}
+
+.card {
+    min-width: 230px; 
+    min-height: 250px;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: white;
@@ -113,113 +83,248 @@
     justify-content: center;
     align-items: center;
     position: relative;
-  }
-  
-  .card-content-About {
+}
+
+.card-content-About {
     text-align: center;
     position: relative;
     padding: 20px;
-  }
-  .mainheadSecond{
+}
+
+.mainheadSecond {
     color: #060607;
     font-size: 40px;
     font-weight: 600;
-  }
-  .siteBannerAbout{
+    text-align: left;
+}
+
+.siteBannerAbout {
     background-color: #D1E6FB;
-    padding: 0px 100px ;
+    padding: 0px 50px;
     text-align: center;
     height: 60vh;
     display: flex;
     align-items: center;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-between;
-    
-  }
-  .leftContentAbout{
+}
+
+.leftContentAbout {
     align-items: flex-end;
-    text-align: left;
-  }
-  .leftContentAboutSecond{
+    text-align: right;
+    width: 100%;
+}
+
+.leftContentAboutSecond {
     width: 50%;
     text-align: left;
-  }
-  .leftContentAboutAfter{
-    align-items: flex-start;
+}
+
+.leftContentAboutAfter {
+    align-items: flex-end;
+    text-align: right;
+    width: 100%;
+    /* align-items: flex-start;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%; */
     
-  }
-  .mainheadSecondAbout{
+}
+
+.mainheadSecondAbout {
     color: #060607;
     font-size: 40px;
     font-weight: 600;
     margin-bottom: 0;
-   
-  
-  }
-  .btnLearnAbout{
+    text-align: left;
+}
+
+.btnLearnAbout {
     background-color: #060607;
     width: 150px;
     padding: 20px;
-  }
-  .aboutFirstBanner{
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.aboutFirstBanner {
     background-image: url('../images/before.png');
-    background-size: cover; /* Ensures the image covers the entire area */
-    background-position: center; /* Centers the image */
-    height: 600px; /* Adjust the height as needed */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
     width: 100%;
-  }
-  .siteBannerAboutSecond{
+}
+
+.siteBannerAboutSecond {
     background-color: white;
-    padding: 0px 100px ;
+    padding: 0px 50px;
     text-align: center;
     height: 60vh;
     display: flex;
     align-items: center;
-    flex-direction:row;
-    width: 100%;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
 
-  }
-  .aboutbefore{
-    width:80%;
+    
+}
+
+.aboutbefore {
+    width: 90%;
     text-align: left;
-  }
-  .aboutafter{
-    width:60%;
+}
+
+.aboutafter {
+    width: 90%;
     text-align: left;
-  }
-  .aboutSecondBanner{
+}
+
+.aboutSecondBanner {
     background-image: url('../images/after.png');
-    background-size: cover; /* Ensures the image covers the entire area */
-
-    height: 600px; /* Adjust the height as needed */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
     width: 100%;
-    align-self: flex-end;
-    align-content: flex-start;
-  }
-  .joinSection{
+
+    
+}
+
+.joinSection {
     background-color: #3863FA;
-    height:50vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-  
-  }
-  .joinText{
-    font-size: 20px;
-    width:800px;
-    color: white;
+    text-align: center;
+}
 
-
-  }
-  .joinSection h1{
-    color: white;
+.joinText {
+    font-size: 50px;
     font-weight: 700;
-    font-size: 40px;
-  }
+    margin-bottom: 0;
+    color: white;
+}
+.joinPara{
+    color:white;
+    font-size: 15px;
+    text-align: center;
+    width: 500px;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .about-us-container {
+        padding: 0;
+    }
+
+    .bannerNewAbout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .bannerNewAbout h2 {
+        font-size: 32px;
+    }
+
+    .about-us-content-top {
+        padding: 20px;
+    }
+
+    .about-us-content-top h3 {
+        font-size: 24px;
+    }
+
+    .about-us-content-top p {
+        font-size: 16px;
+    }
+
+    .swiper-section {
+        padding: 10px;
+    }
+
+    .carousel-item {
+        flex-direction: column;
+    }
+
+    .card-container {
+        height: 50vh;
+    }
+
+    .card {
+        
+        min-height: 250px;
+    }
+
+    .siteBannerAbout,
+    .siteBannerAboutSecond {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    .leftContentAbout,
+    .leftContentAboutSecond,
+    .leftContentAboutAfter {
+        width: 100%;
+        text-align: left;
+        padding: 20px 0;
+    }
+
+    .btnLearnAbout {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .joinText {
+        width: 100%;
+        padding: 20px;
+        font-size: 16px;
+    }
+
+  
+
+    .aboutFirstBanner,
+    .aboutSecondBanner {
+        height: 300px;
+    }
+
+    .aboutbefore,
+    .aboutafter {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .bannerNewAbout h2 {
+        font-size: 24px;
+    }
+
+    .about-us-content-top h3 {
+        font-size: 20px;
+    }
+
+    .about-us-content-top p {
+        font-size: 14px;
+    }
+
+    .joinText {
+        font-size: 20px;
+    }
+    .joinPara{
+       
+        width: 300px;
+    }
+
+   
+}

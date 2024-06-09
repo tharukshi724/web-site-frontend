@@ -15,7 +15,7 @@ import JoinTheClub from './Components/WhyJoin';
 import AboutUs from './Components/AboutUs';
 import Login from './Components/Login';
 import Signup from './Components/SignUp';
-
+import HowItWorksPage from './Components/howItsWork';
 
 function App() {
   return (
@@ -43,6 +43,9 @@ function App() {
         <Footer />
         {/* <JoinTheClub/> */}
         {/* <AboutUs/> */}
+        {/* <PartnershipOpportunities/> */}
+        {/* <Home/> */}
+        {/* <HowItWorksPage/> */}
        
     </Router>
     </div>
